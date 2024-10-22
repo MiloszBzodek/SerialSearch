@@ -1,0 +1,154 @@
+/* Globalne ustawienia: usunięcie marginesów i paddingu, box-sizing dla wszystkich elementów */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ustawienia dla elementu body: ciemne tło, jasny tekst, font Poppins, lepsza jakość renderowania tekstu */
+body {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Sekcja wyszukiwania: wyśrodkowanie zawartości i nadanie cienia */
+#search-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Stylizacja pola wyszukiwania: ciemne tło, jasny tekst, zaokrąglone rogi, animacja */
+#search-section input#search-input {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    width: 300px;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+/* Zmiana stylu inputu przy focus: jaśniejsze tło, szersze pole */
+#search-section input#search-input:focus {
+    background-color: #444;
+    width: 350px;
+    outline: none;
+}
+
+/* Sekcja danych o serialach: responsywna siatka z elementami, odstępy między kartami */
+.shows-data-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Pudełko z informacją o serialu: ciemne tło, zaokrąglone rogi, cień, animacja */
+.show-box {
+    position: relative;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    cursor: pointer;
+}
+
+/* Efekt hover na pudełku: podniesienie i powiększenie cienia */
+.show-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Stylizacja obrazka serialu: pełna szerokość, dolna ramka */
+.show-box img {
+    width: 100%;
+    border-bottom: 2px solid #444;
+}
+
+/* Marginesy i padding dla tekstu wewnątrz show-box */
+.show-box div {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* Stylizacja gatunków serialu: jaśniejszy tekst, mniejszy rozmiar fontu */
+.show-box div.show-genres {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+/* Overlay z opisem serialu: pozycjonowanie absolutne, ciemne półprzezroczyste tło, ukryty domyślnie */
+.show-overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ccc;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    overflow-y: auto;
+    font-size: 1rem;
+}
+
+/* Pokazanie opisu serialu po najechaniu myszką */
+.show-box:hover .show-overview {
+    opacity: 1;
+}
+
+/* Ustawienia scrollbarów: cieńszy pasek, ciemne kolory */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+}
+
+/* Stylizowany scrollbar dla przeglądarek opartych na WebKit */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Tło tracka scrollbarów */
+*::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+}
+
+/* Stylizacja "kciuka" scrollbarów: ciemniejszy kolor i zaokrąglone rogi */
+*::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 12px;
+}
+
+/* Sekcja z informacją o API: wyśrodkowanie tekstu, jasny tekst na ciemnym tle */
+#tv-maze-info {
+    padding: 15px;
+    text-align: center;
+    background-color: #1e1e1e;
+    margin-top: 20px;
+    color: #999;
+}
+
+/* Link do TV Maze API: jasnoszary kolor i płynna zmiana koloru po hover */
+#tv-maze-info a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efekt hover na linku: zmiana koloru na biały */
+#tv-maze-info a:hover {
+    color: #fff;
+}

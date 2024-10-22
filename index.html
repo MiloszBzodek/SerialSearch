@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Ustawienia meta, konfiguracja dla poprawnego wyświetlania strony i ustawienie języka -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tytuł strony wyświetlany w karcie przeglądarki -->
+    <title>Series Search</title>
+
+    <!-- Ikona strony (favicon) pobierana z zewnętrznego źródła -->
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2020/06/14/14/25/flat-5298072_640.png" type="image/x-icon">
+
+    <!-- Preloadowanie połączenia z Google Fonts dla lepszej wydajności -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Importowanie fontu Poppins z Google Fonts (różne warianty grubości i kursywy) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- Dołączenie zewnętrznego arkusza stylów -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Sekcja wyszukiwania seriali -->
+        <section id="search-section">
+            <!-- Pole tekstowe do wprowadzania nazwy serialu -->
+            <input type="text" id="search-input" placeholder="Wpisz serial">
+        </section>
+
+        <!-- Sekcja wyświetlająca dane o serialach -->
+        <section class="shows-data-section">
+            <!-- Przykładowe pudełko z informacjami o serialu -->
+            <div class="show-box">
+                <!-- Obrazek przedstawiający serial -->
+                <img src="https://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg" alt="">
+                <!-- Tytuł serialu -->
+                <div class="show-title">Friends</div>
+                <!-- Gatunki serialu -->
+                <div class="show-genres">Comedy, Drama</div>
+                <!-- Krótkie info o serialu (w przyszłości można dynamicznie wypełnić) -->
+                <div class="show-overview">Info</div>
+            </div>
+        </section>
+
+        <!-- Sekcja z linkiem do dokumentacji TV Maze API -->
+        <section id="tv-maze-info">
+            <!-- Link do dokumentacji API używanego do pobierania informacji o serialach -->
+            <a href="https://www.tvmaze.com/api">TV Maze Api</a>
+        </section>
+    </main>
+
+    <!-- Dołączenie zewnętrznego pliku JavaScript -->
+    <script src="file.js"></script>
+</body>
+</html>
